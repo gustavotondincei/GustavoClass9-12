@@ -1,1 +1,26 @@
-h1{color: blue}
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(253, 251, 249);
+}
+
+#titulares {
+    color:rgb(239, 94, 27)  
+}
+
+h2 , h3{
+    color:rgb(101, 190, 231)
+}
+
+h1{
+    font-size: 72px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img{
+    max-width: 400px;
+    float: left;
+    border-radius: 36px;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
