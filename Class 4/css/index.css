@@ -1,0 +1,10 @@
+/* Reset css -  es un conjunto de reglas nuevas que elimina los estilos predefinidos de css.
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+*/
