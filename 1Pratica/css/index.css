@@ -49,10 +49,5 @@ main{
     background-color: white;
 }
 
-section #hero {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: c;
-  align-content: end;
-}
+
 

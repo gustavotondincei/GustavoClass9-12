@@ -1,0 +1,60 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+/* end css reset */
+
+.hero-text{
+    padding: 64px 16px;
+    background-color: rgb(253, 251, 254);
+}
+
+.hero-text__block{
+    max-width: 964px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 64px;
+    align-items: center;
+}
+
+.hero-text__content{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    gap: 32px;
+    align-items: start;
+}
+
+    .hero-text__titles{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 16px;
+    }   
+
+.btn {
+    color: white;
+    background-color: black;
+    padding: 10px 32px;
+    border-radius: 100px;
+}
+
+.hero-text__image{
+    flex: 1 1 300px;
+}
+
+    .hero-text__image img {
+        border-radius: 10px;
+    }
