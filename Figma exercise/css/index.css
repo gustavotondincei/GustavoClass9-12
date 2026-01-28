@@ -62,13 +62,13 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 .facil-2 {
 display: flex;
 flex-flow: row wrap;
-padding: 48px 60px; 
+padding: 48px 48px; 
 }
 
 .facil-2__container {
 display: flex;
 flex-flow: row wrap;
-padding: 16px;
+padding: 16px 16px;
 gap: 16px;
 max-width: 920px;
 align-items: center;
