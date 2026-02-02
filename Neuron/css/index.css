@@ -1,4 +1,26 @@
-/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root { /* afecta todo el archivo*/
+    /* Colores */
+    --color-primary: #4391F0;
+    --color-light: #F3F3F3;
+    --color-text: #1f1f1f;
+
+    /* Funtes */ 
+    --font-titles: 'Hedvig Letters Serif', serif;
+    --font-text: 'Instrument Sans', sans-serif;
+
+
+    /* Sizes */ 
+    --max-width: 964px;
+    --padding-sec: 64px 16px;
+
+} 
+
+
+
+/* css reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,31 +28,127 @@
 }
 
 img {
-    width: 100%;
     max-width: 100%;
+    width: 100%;
 }
-h1, h2, h3, h4, h5, h6, p, a, li {
-    font-family: Helvetica, sans-serif;
+
+h1, h2, h3, h4, h5, h6, a, p, li {
     text-decoration: none;
     color: inherit;
 }
-/* end css reset */
 
-.hero-text{
-    padding: 64px 16px;
-    background-color: rgb(253, 251, 254);
+/* /css reset */
+
+
+/* components */
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    border-radius: 38px;
+    background-color: var(--color-text);
+    color: white;
 }
 
-.hero-text__block{
-    max-width: 964px;
+.btn--text-arrow {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    border-radius: 38px;
+    background-color: var(--color-text);
+    color: white;
+    gap: 10px;
+}
+
+.btn--arrow {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    border-radius: 38px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-text);
+    color: white;
+}
+
+.btn-icon {
+    height: 18px;
+}
+
+
+
+
+h1, .h1 {
+    font: 400 64px var(--font-titles);
+    color: var(--color-text);
+}
+
+h2, .h2 {
+    font: 32px 400 var(--font-titles);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+h3, .h3 {
+    font: 400 24px var(--font-titles);
+    color: var(--color-text);
+}
+
+h4, .h4 {
+    font: 500 19px var(--font-text);
+    color: var(--color-text);
+}
+
+p, .body {
+    font: 400 15px var(--font-text);
+    color: var(--color-text);
+}
+
+a, .links {
+    font: 500 15px var(--font-text);
+    color: var(--color-text);
+}
+
+.section {
+    display: flex;
+    flex-flow: row wrap;
+    padding: var(--padding-sec);
+}
+
+.container {
+    max-width: var(--max-width);
     margin: 0 auto;
+}
+
+
+/* /components */
+
+
+
+
+/* Main */
+
+
+/* about-us */
+
+
+
+.about-us .container {
     display: flex;
     flex-flow: row wrap;
     gap: 64px;
     align-items: center;
 }
 
-.hero-text__content{
+.about-us__img {
+    flex: 1 1 300px;
+}
+
+.about-us__content {
     display: flex;
     flex-flow: column nowrap;
     flex: 1 1 300px;
@@ -38,23 +156,16 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     align-items: start;
 }
 
-    .hero-text__titles{
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 16px;
-    }   
-
-.btn {
-    color: white;
-    background-color: black;
-    padding: 10px 32px;
-    border-radius: 100px;
+.about-us .btn {
+    gap: 10px;
 }
 
-.hero-text__image{
-    flex: 1 1 300px;
+.about-us__title {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
 }
 
-    .hero-text__image img {
-        border-radius: 10px;
-    }
+
+
+/* /about-us */
