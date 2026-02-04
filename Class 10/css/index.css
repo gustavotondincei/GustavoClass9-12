@@ -1,0 +1,36 @@
+/* css reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* /css reset */
+
+section {
+    padding: 16px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: rgb(195, 228, 248);
+
+    display: grid;
+
+    grid-template-columns: auto 200px auto;
+    grid-template-rows: 100px 100px;
+
+    gap: 16px;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.item {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.pepe {
+    background-color: rgb(255, 154, 87);
+    grid-column: 1 / 3;
+}
