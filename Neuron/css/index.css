@@ -61,7 +61,6 @@ h1, h2, h3, h4, h5, h6, a, p, li {
 
 .btn-text-arrow {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 10px 32px;
@@ -72,9 +71,6 @@ h1, h2, h3, h4, h5, h6, a, p, li {
     transition: 0.2s;
 }
 
-.btn-text-arrow a {
-    color: var(--color-light);
-}
 
 .btn-text-arrow:hover {
     opacity: 80%;
@@ -140,7 +136,7 @@ p, .body {
     color: var(--color-text);
 }
 
-a, .links {
+a, .links, li {
     font: 500 15px var(--font-text);
     color: var(--color-text);
 }
@@ -258,10 +254,9 @@ justify-content: space-between;
     gap: 16px;
 }
 
-.hero-double1 a{
+.abt-txt {
     text-decoration: underline;
 }
-
 
 /* /about-us */
 
@@ -302,8 +297,8 @@ justify-content: space-between;
 }
 
 .services__cards {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 16px 0px;
     gap: 16px;
 }
@@ -311,7 +306,6 @@ justify-content: space-between;
 .services__card {
     display: flex;
     flex-flow: column nowrap;
-    flex: 1 1 300px;
     gap: 16px;
 }
 
@@ -333,7 +327,7 @@ justify-content: space-between;
     gap: 16px;
 }
 
-.prices__card1 {
+.prices__card {
     background-color: var(--color-light);
     border-radius: 5px;
     color: var(--color-text);
@@ -342,79 +336,138 @@ justify-content: space-between;
     flex: 1 1 200px;
     padding: 32px;
     gap: 48px;
+    transition: 0.3s;
+
 }
 
-.prices__card2 {
+.pcard2 {
     background-color: var(--color-text);
-    border-radius: 5px;
     color: var(--color-light);
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 200px;
-    padding: 32px;
-    gap: 48px;
 }
 
-.prices__content1 {
+.prices__content {
     display: flex;
     flex-flow: column nowrap;
     gap: 16px;
     text-align: center;
 }
 
-.prices__content2 {
+.pcontent2 {
     display: flex;
     flex-flow: column nowrap;
     gap: 16px;
     text-align: center;
 }
 
-    .prices__content2 h1, .prices__content2 h3 {
+    .pcontent2 h1, .pcontent2 h3 {
         color: var(--color-light);
     }
 
-    .prices__content2 .btn-text-arrow {
+    .pcontent2 .btn-text-arrow {
         background-color: var(--color-light);
-        color: var(--color-text);
-    }
-
-    .prices__content2 a {
         color: var(--color-text);
     }
 
 .prices__list {
     gap: 10px;
     justify-content: start;
+    list-style: none;
 }
 
-.prices__card1 ul {
-    list-style: none;
+.prices__card ul {
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
 }
 
-.prices__card1 li {
+.prices__card li {
     display: flex;
+    flex-flow: row nowrap;
     gap: 20px;
     align-items: center;
 }
 
-.prices__card2 ul {
-    list-style: none;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
-}
-
-.prices__card2 li {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.pcard2 li {
+    color: var(--color-light);
 }
 
 .red-icon {
     color: #E26868;
 }
 
+.prices__card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 5px 5px #1f1f1f50;
+}
+
 /* /prices */
+
+
+/* contact */
+
+.contact {
+
+}
+
+.contact img {
+    max-width: fo;
+}
+
+.contact form {
+    gap: 16px;
+}
+
+
+/* /contact */
+
+
+
+
+
+
+
+/* footer */
+
+.footer {
+    padding: 10px;
+}
+
+.footer__block {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: var(--max-width-xl);
+    background-color: var(--color-text);
+    padding: 32px;
+    gap: 32px;
+    border-radius: 5px;
+}
+
+.footer__up {
+    display: flex;
+    flex-flow: row  nowrap;
+    justify-content: space-between;
+    padding: 16px 0px;
+}
+
+.footer__up img {
+    height: 24px;
+    max-width: 124px;
+    border-radius: 0px;
+}
+
+.footer__up ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+.footer__down {
+}
+
+.footer__down a {
+    color: var(--color-light);
+}
+
+
+
+/* /footer */
