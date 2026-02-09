@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6, a, p, li {
     color: inherit;
 }
 
+
 /* /css reset */
 
 
@@ -131,7 +132,7 @@ h4, .h4 {
     color: var(--color-text);
 }
 
-p, .body {
+p, .body, input, select, label {
     font: 400 15px var(--font-text);
     color: var(--color-text);
 }
@@ -154,6 +155,30 @@ a, .links, li {
     margin: 0 auto;
 }
 
+/* form */
+
+input, select {
+    padding: 16px 19px;
+    border-radius: 100px;
+    background-color: var(--color-light);
+    color: var(--color-text);
+    border: none;
+    width: 100%;
+}
+
+#contact__form input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+
+    &:hover {
+        opacity: 80%;
+    }
+
+}
+
+select {
+    border-right: 19px solid #00000000;
+}
 
 /* /components */
 
@@ -405,18 +430,66 @@ justify-content: space-between;
 
 /* contact */
 
-.contact {
 
+.contact__block{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 64px;
+    align-items: center;
 }
 
-.contact img {
-    max-width: fo;
+.contact__map {
+    flex: 2 1 300px;
+    height: 600px;
 }
 
-.contact form {
+.contact__map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact__content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    gap: 32px;
+    align-items: start;
+}
+
+.contact__heading {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 14px;
+}
+
+#contact__form {
+    display: flex;
+    flex-flow: column nowrap;
     gap: 16px;
 }
 
+
+.form-privacy {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    padding-left: 6px;
+}
+
+input[type="checkbox"] {
+    height: 16px;
+    width: auto;
+}
+
+
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
 /* /contact */
 
@@ -437,6 +510,7 @@ justify-content: space-between;
     flex-flow: column nowrap;
     max-width: var(--max-width-xl);
     background-color: var(--color-text);
+    margin: 0 auto;
     padding: 32px;
     gap: 32px;
     border-radius: 5px;

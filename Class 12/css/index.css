@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#contact-form {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 34px auto;
+    padding: 34px;
+    border: 5px;
+    background-color: aliceblue;
+}
+
+input {
+    padding: 16px 19px;
+    border-radius: 100px;
+}
+
+input[type="submit"] {
+    background-color: rgb(116, 255, 255);
+}

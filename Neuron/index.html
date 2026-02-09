@@ -288,36 +288,59 @@
     <!-- contact -->
  <section class="section contact">
 
-    <div class="container hero-double__block">
+    <div class="container contact__block">
 
-        <div class="hero-double__img contact__img">
-            <img src="../Neuron/media/img/mapa.png" alt="">
+        <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1175.883822714561!2d-0.35636175647860036!3d39.47888218468758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f49cc253387%3A0xa7be35bdeeb341d2!2sCEI%20Centro%20de%20Estudios%20Innovaci%C3%B3n.%20Cursos%20y%20masters%20de%20dise%C3%B1o%2C%20interiores%2C%20web%2C%20videojuegos%2C%20cloud%2C%20data%20y%20marketing%20digital!5e0!3m2!1ses!2ses!4v1770633678548!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="hero-double__content">
-            <div class="contact__header">
+        <div class="contact__content">
+            <div class="contact__heading">
+
                 <h2>Contact with us</h2>
                 <p>You can also check other ways to contact us on the contact page.</p>
+
             </div>
-            <div>
-                <form action=""  class="contact__form">
-                    <input type="text" name="fname" id="fname" placeholder="Name">
 
-                    <input type="text" name="fsurname" id="fsurname" placeholder="Surname"><br>
+            <form action="/url"  id="contact__form">
+                <div class="form-row">
 
-                    <input type="text" name="fmail" id="fmail" placeholder="E-mal"><br>
+                    <!-- nombre -->
+                    <label for="fname" style="display: none;"></label>
+                    <input type="text" name="Name" id="fname" placeholder="Name">
 
-                    <select name="fservice" id="fservice" placeholder="Select the Service">
-                        <option value="option1"> Option 1</option>
-                        <option value="option2"> Option 2</option>
-                        <option value="option3"> Option 3</option>
-                    </select><br>
+                    <!-- apellido -->
+                    <label for="fsurname" style="display: none;"></label>
+                    <input type="text" name="fsurname" id="Surname" placeholder="Surname">
 
-                    <input type="checkbox" name="fprivacy" id="fprivacy"><br>
+                </div>
 
-                    <input type="submit" name="fsubmit" id="fsubmit" value="Send">
-                </form>
-            </div>
+                <!-- email -->
+                 <label for="fmail" style="display: none;"></label>
+                <input type="text" name="Email" id="fmail" placeholder="E-mail">
+
+                <!-- servicio -->
+                <label for="fservice" style="display: none;"></label>
+                <select name="Service" id="fservice">
+                    <option value="0" selected disabled>Select the Service</option>
+                    <option value="option1"> Web development</option>
+                    <option value="option2"> App development</option>
+                    <option value="option3"> Neuhost</option>
+                    <option value="option4"> Neuron Studio</option>
+                    <option value="option5"> WordPress</option>
+                    <option value="option6"> UX/UI</option>
+                </select>
+
+                <!-- privacy -->
+                <div class="form-privacy">
+                    <label for="fprivacy">I have read and accept the <a href="#">Privacy policy</a></label>
+                    <input type="checkbox" name="privacy" id="fprivacy">
+                </div>
+
+                <!-- submit -->
+                <label for="fsubmit" style="display: none;"></label>
+                <input type="submit" name="submit" id="fsubmit" value="Send">
+            </form>
         </div>
 
     </div>
