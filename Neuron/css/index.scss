@@ -148,7 +148,7 @@ a, .link, li {
 .section {
     margin: 0 auto;
     max-width: var(--max-width-xl); 
-    padding: clamp(2rem, 1vw, 4rem);
+    padding: clamp(2rem, 5vw, 4rem) clamp(.75rem, 2vw, 16px);
 }
 
 .container {
@@ -245,8 +245,14 @@ justify-content: space-between;
 
     & li {
         white-space: nowrap;
-    }
 
+        & a {
+            opacity: 0.5;
+        }
+    }
+.active {
+    opacity: 1;
+}
     & span {
 
     @media (min-width: 720px){
@@ -263,14 +269,21 @@ justify-content: space-between;
 /* hero-banner */
 
 .hero-banner {
-    display: flex;
-    background-image: url(../media/img/Home-banner.webp);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5px;
-    min-height: 90vh;
+    padding: 0px 0.625rem;
 }
+
+.hero-banner__background {
+        display: flex;
+        margin: 0 auto;
+        max-width: var(--max-width-xl); 
+        background-image: linear-gradient(rgba(31, 31, 31, 0.2), rgba(31, 31, 31, 0.2)), url(../media/img/Home-banner.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        min-height: 90vh;
+        padding: .625rem;
+} 
 
 .hero-banner__block {
     display: flex;
@@ -280,6 +293,12 @@ justify-content: space-between;
     width: 100%;
     padding: .625rem;
     gap: 1rem;
+
+    @media (max-width:720px) {
+        align-items: center;
+        text-align: center;
+        padding: 0rem;
+    }
 }
 
 .hero-banner__text {
@@ -324,6 +343,7 @@ justify-content: space-between;
 
     @media (max-width: 720px) {
         order: 1;
+        align-items: stretch;
     }
 }
 
@@ -333,18 +353,20 @@ justify-content: space-between;
     gap: 1rem;
 }
 
-.abt-txt {
-    text-decoration: underline;
-}
 
 /* /about-us */
 
 /* hero-icon */
 
 .hero-icons__block {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 720px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
 .hero-icons__card {
     display: flex;
     flex-flow: column nowrap;
@@ -353,6 +375,7 @@ justify-content: space-between;
     padding: 1rem;
     gap: 1rem;
 }
+
 .hero-icons__card-title {
     display: flex; 
     flex-flow: row nowrap;
@@ -373,6 +396,10 @@ justify-content: space-between;
     padding: 1rem;
     gap: 1rem;
     align-items: start;
+
+    @media (max-width: 720px) {
+        align-items: stretch;
+    }
 }
 
 .services__cards {
@@ -380,6 +407,10 @@ justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 0rem;
     gap: 1rem;
+
+    @media(max-width: 720px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .services__card {
@@ -389,7 +420,7 @@ justify-content: space-between;
 }
 
 .services__card img {
-    max-height: 11.125rem;
+    height: 11.125rem;
     object-fit: cover;
 }
 
@@ -402,8 +433,13 @@ justify-content: space-between;
 
 .prices__block {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+
+    @media (max-width:720px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
 
 .prices__card {
@@ -415,7 +451,6 @@ justify-content: space-between;
     padding: 2rem;
     gap: 3rem;
     transition: 0.3s;
-
 }
 
 .pcard2 {
@@ -474,7 +509,7 @@ justify-content: space-between;
 }
 
 .prices__card:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
     box-shadow: 0px 5px 5px #1f1f1f50;
 }
 
@@ -506,18 +541,20 @@ justify-content: space-between;
     flex-flow: column nowrap;
     flex: 1 1 18.75rem;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
 }
 
 .contact__heading {
     display: flex;
     flex-flow: column nowrap;
     gap: .875rem;
+    justify-content: center;
 }
 
 #contact__form {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -562,13 +599,25 @@ input[type="checkbox"] {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
+    & h2 {
+        flex: 1 1 18.75rem;
+    }
+    & a {
+        flex: 1 1 18.75rem;
+    }
+
+    @media (max-width: 720px) {
+        gap: 2rem;
+    }
 }
 
 .blog__grid {
     display: grid;
     padding: 1rem 0rem;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
 .blog__card {
@@ -684,7 +733,7 @@ input[type="checkbox"] {
 /* services banner */
 
 #services-banner {
-    background-image: url(../media/img/Services-banner.webp);
+    background-image: linear-gradient(rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url(../media/img/Services-banner.webp);
 }
 
 /* /services banner */
@@ -706,7 +755,7 @@ input[type="checkbox"] {
 /* about-us banner */
 
 #about-us-banner {
-    background-image: url(../media/img/About-banner.webp);
+    background-image: linear-gradient(rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url(../media/img/About-banner.webp);
 }
 
 /* /about-us banner */
@@ -738,7 +787,7 @@ input[type="checkbox"] {
 /* news banner */
 
 #news-banner {
-    background-image: url(../media/img/News-banner.webp);
+    background-image: linear-gradient(rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url(../media/img/News-banner.webp);
 }
 
 /* /news banner */
@@ -762,7 +811,7 @@ input[type="checkbox"] {
 /* contact banner */
 
 #contact-banner {
-    background-image: url(../media/img/Contact-banner.webp);
+    background-image: linear-gradient(rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url(../media/img/Contact-banner.webp);
 }
 
 /* /contact banner */
@@ -785,7 +834,7 @@ input[type="checkbox"] {
 /* single post banner */
 
 #post-banner {
-    background-image: url(../media/img/post-banner.jpg);
+    background-image: linear-gradient(rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url(../media/img/post-banner.jpg);
 }
 
 /* /single post banner */
