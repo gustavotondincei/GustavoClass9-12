@@ -250,9 +250,11 @@ justify-content: space-between;
             opacity: 0.5;
         }
     }
-.active {
-    opacity: 1;
-}
+
+    & .active {
+        opacity: 1;
+    }
+
     & span {
 
     @media (min-width: 720px){
