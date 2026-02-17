@@ -1,0 +1,378 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+/* end css reset */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 32px;    
+    transform: scale(1);
+    transition: .1s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.2));
+    background-color: white;
+    color: black;
+
+}
+
+/* facil 1 */
+
+.facil1 {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 48px 0px;
+    background-color: #fbfbfb;
+    gap: 10px;
+}
+
+.facil1-container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 920px;
+    padding: 16px;
+    margin: 0 auto;
+    gap: 48px;
+    align-items: center;
+}
+
+.facil1-image {
+    flex: 1 1 300px;
+}
+
+.facil1-content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    align-items: start;
+    gap: 16px;
+    padding: 16px 16px;
+}
+
+/* /facil 1 */
+
+
+/* facil 2 */
+.facil2 {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 48px 0px;
+}
+
+.facil2-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 920px;
+    padding: 16px 16px;
+    gap: 16px;
+}
+
+.facil2-blocks {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 250px;
+    padding: 16px 16px;
+    gap: 16px;
+}
+
+/* /facil 2 */
+
+
+
+
+
+
+/* facil 3 */
+
+.facil3 {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 48px 0px;
+    background-color: #fbfbfb;
+}
+
+.facil3-container {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 920px;
+    align-items: start;
+    gap: 32px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.facil3-smallcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    pad: 16px 0px;
+}
+
+.facil3-blocks {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* facil 3 */
+
+
+
+
+
+/* facil 4 */
+
+.facil4 {
+    display: flex;
+    flex-flow: row   wrap;
+    padding: 48px 0px;
+}
+
+.facil4-container {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 32px;
+}
+
+.facil4-content-top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.facil4-smallcontainer {
+    display: flex;
+    flex-flow: row   wrap;
+    padding: 16px 0px;
+    gap: 16px;
+}
+
+.facil4-blocks {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 300px;
+    gap: 16px;
+    padding: 16px;
+}
+
+.facil4-content-bottom {
+    display: flex;
+    flex-flow: row   wrap;
+    justify-content: space-between;
+}
+
+    .facil4-btn {
+        font-weight: 600;
+        transform: scale(1);
+        transition: .2s;
+    }
+
+    .facil4-btn:hover {
+        transform: scale(1.1);
+        transform: translateY(-2px);
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.4));
+    }
+
+
+/* /facil 4 */
+
+
+
+
+/* medio1 */
+
+
+.medio1 {
+background-color: #fbfbfb;
+display: flex;
+flex-flow: row wrap;
+padding: 48px 0px;
+}
+
+.medio1-container {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 48px;
+}
+
+.medio1-smallcontainer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+    gap: 16px;
+    align-items: start;
+}
+
+.medio1-text {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    padding: 16px 0px;
+}
+
+.medio1-text p {
+    flex: 1 1 300px;
+}
+
+/* /medio1 */
+
+
+
+/* medio2 */
+
+.medio2 {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 48px 0px;
+}
+
+.medio2-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 920px;
+}
+
+.medio2-images {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}
+
+.medio2-img {
+    flex: 1 1 300px;
+}
+
+.medio2-content {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+    gap: 16px;
+    align-items: start;
+}
+
+.medio2-text {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 16px 0px;
+    gap: 16px;
+}
+
+.medio2-text {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 16px 0px;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.medio2-content p, .medio2-content a {
+    flex: 1 1 300px;
+}
+
+
+/* /medio2 */
+
+
+
+
+/* medio3 */
+
+
+.medio3 {
+    background-color: #fbfbfb;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 48px 0px;
+}
+
+.medio3-container {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    max-width: 920px;
+    padding: 32px;
+    gap: 16px;
+}
+
+.medio3-smallcontainer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+    gap: 16px;
+}
+
+.medio3-cards {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 16px 0px;
+    gap: 16px;
+}
+
+.medio3-card {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fbfbfb;
+    flex: 1 1 200px;
+    padding: 32px;
+    gap: 16px;
+    transition: .1s;
+}
+
+.medio3-card:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.2));
+}
+
+.medio3-cardtitle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.medio3-textbtn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+
+
+/* /medio3 */
