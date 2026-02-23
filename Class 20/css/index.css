@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div {
+    display: flex;
+}
+
+
+
+
+
+
+body {
+    background-color: rgb(222, 222, 222);
+    min-height: 200rem;
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.grid {
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid__card {
+    border-radius: 5px;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+}
+
+.grid__card--gray {
+    background-color: rgb(100, 100, 100);
+}
+
+
+
+
+
+
+.grid1 .grid__card--gray{
+    position: relative;
+
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: 0;
+}
+
+
+
+.grid2 {
+    position: relative;
+}
+
+.grid2 .grid__card--gray{
+    position: absolute;
+
+    top: 1rem;
+    left: 1rem;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+.grid3 {
+    flex-flow: row-reverse wrap;
+}
+
+.grid3 .grid__card--gray{
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+}
+
+
+.grid4 {
+    min-height: 500px;
+}
+
+.grid4 .grid__card--gray {
+    position: sticky;
+
+    top: 1rem;
+}
+
+
+
+
+.btns {
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .625rem 2rem;
+    gap: .625rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay:target {
+    display: flex;
+}
+
+.pop-up {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 300px;
+    position: relative;
+    
+    & a {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
