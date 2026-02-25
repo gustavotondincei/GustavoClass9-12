@@ -159,20 +159,16 @@ section {
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
 
+    &.overlay__menu {
+        justify-content: end;
+        align-items: stretch;
+    }
+
+    &:target {
+        display: flex;
+    }
 
 }
-
-.overlay.overlay__menu {
-    justify-content: end;
-    align-items: stretch;
-}
-
-
-.overlay:target {
-    display: flex;
-}
-
-
 
 .pop-up {
     display: flex;
@@ -182,6 +178,18 @@ section {
     gap: 1rem;
     width: 350px;
     position: relative;
+
+    &.pop-up__menu {
+        width: 16rem;
+        padding: 2rem 1.2rem;
+        gap: 2rem;
+
+        & .btn-x {
+            position: absolute;
+            right: 2.4rem;
+            top: 2.4rem;
+        }
+    }
 }
 
 
@@ -191,14 +199,3 @@ section {
     top: 1.4rem;
 }
 
-.pop-up__menu {
-    width: 16rem;
-    padding: 2rem 1.2rem;
-    gap: 2rem;
-
-    & .btn-x {
-        position: absolute;
-        right: 2.4rem;
-        top: 2.4rem;
-    }
-}
