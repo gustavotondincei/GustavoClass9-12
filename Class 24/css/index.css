@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+
+    &:hover {
+        background-color: rgba(255, 127, 80, 0.8);
+    }
+}

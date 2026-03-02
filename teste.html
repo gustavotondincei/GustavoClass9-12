@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 20</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+body {
+    background-color: rgb(222, 222, 222);
+    min-height: 200rem;
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.grid {
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid__card {
+    border-radius: 5px;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+}
+
+.grid__card--gray {
+    background-color: rgb(100, 100, 100);
+}
+
+
+
+
+
+
+.grid1 .grid__card--gray{
+    position: relative;
+
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: 0;
+}
+
+
+
+.grid2 {
+    position: relative;
+}
+
+.grid2 .grid__card--gray{
+    position: absolute;
+
+    top: 1rem;
+    left: 1rem;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+.grid3 {
+    flex-flow: row-reverse wrap;
+}
+
+.grid3 .grid__card--gray{
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+}
+
+
+.grid4 {
+    min-height: 500px;
+}
+
+.grid4 .grid__card--gray {
+    position: sticky;
+
+    top: 1rem;
+}
+
+
+
+
+.btns {
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .625rem 2rem;
+    gap: .625rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &.overlay__menu {
+        justify-content: end;
+        align-items: stretch;
+    }
+
+    &:target {
+        display: flex;
+    }
+
+}
+
+.pop-up {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+    width: 350px;
+    position: relative;
+
+    &.pop-up__menu {
+        width: 16rem;
+        padding: 2rem 1.2rem;
+        gap: 2rem;
+
+        & .btn-x {
+            position: absolute;
+            right: 2.4rem;
+            top: 2.4rem;
+        }
+    }
+}
+
+
+.btn-x {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.4rem;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="grid grid1">
+            <div class="grid__card"></div>
+            <div class="grid__card grid__card--gray"></div>
+            <div class="grid__card"></div>
+        </div>
+
+        <div class="grid grid2">
+            <div class="grid__card"></div>
+            <div class="grid__card grid__card--gray"></div>
+            <div class="grid__card"></div>
+        </div>
+
+        <div class="grid grid3">
+            <div class="grid__card"></div>
+            <div class="grid__card grid__card--gray"></div>
+            <div class="grid__card"></div>
+        </div>
+
+        <div class="grid grid4">
+            <div class="grid__card"></div>
+            <div class="grid__card grid__card--gray"></div>
+            <div class="grid__card"></div>
+        </div>
+
+        <div class="btns">
+            <a href="#popup" class="btn">pop-up</a>
+            <a href="#menu" class="btn">menu</a>
+        </div>
+
+    </section>
+
+
+    <div class="overlay" id="popup">
+        <div class="pop-up">
+            <a href="#" class="btn-x">X</a>
+            <h2>Esto es un pop-up</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minima quos impedit itaque doloremque ullam
+                voluptatum quibusdam minus quia.</p>
+        </div>
+    </div>
+    <div class="overlay overlay__menu" id="menu">
+        <div class="pop-up pop-up__menu">
+            <a href="#" class="btn-x">X</a>
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
