@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>class 20</title>
     <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
 </head>
 <body>
+
     <section>
+            <!-- 
         <div class="grid grid1">
             <div class="grid__card"></div>
             <div class="grid__card grid__card--gray"></div>
@@ -31,10 +34,10 @@
             <div class="grid__card grid__card--gray"></div>
             <div class="grid__card"></div>
         </div>
-
+     -->
         <div class="btns">
-            <a href="#popup" class="btn">pop-up</a>
-            <a href="#menu" class="btn">menu</a>
+            <button onclick="openPopup()" class="btn">pop-up</button>
+            <button onclick="openMenu()" class="btn">menu</button>
         </div>
 
     </section>
@@ -42,14 +45,14 @@
 
         <div class="overlay" id="popup">
             <div class="pop-up">
-                <a href="#" class="btn-x">X</a>
+                <button onclick="closePopup()" class="btn-x">X</button>
                 <h2>Esto es un pop-up</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minima quos impedit itaque doloremque ullam voluptatum quibusdam minus quia.</p>
             </div>
         </div>
         <div class="overlay overlay__menu" id="menu">
             <div class="pop-up pop-up__menu">
-                <a href="#" class="btn-x">X</a>
+                <button onclick="closeMenu()" class="btn-x">X</button>
                 <h2>Menu</h2>
                 <nav>
                     <ul>

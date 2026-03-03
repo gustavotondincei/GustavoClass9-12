@@ -159,15 +159,15 @@ section {
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
 
-    &.overlay__menu {
-        justify-content: end;
-        align-items: stretch;
-    }
+}
 
-    &:target {
-        display: flex;
-    }
+.active {
+    display: flex;
+}
 
+.overlay__menu {
+    justify-content: end;
+    align-items: stretch;
 }
 
 .pop-up {
@@ -179,16 +179,16 @@ section {
     width: 350px;
     position: relative;
 
-    &.pop-up__menu {
-        width: 16rem;
-        padding: 2rem 1.2rem;
-        gap: 2rem;
+}
+.pop-up__menu {
+    width: 16rem;
+    padding: 2rem 1.2rem;
+    gap: 2rem;
 
-        & .btn-x {
-            position: absolute;
-            right: 2.4rem;
-            top: 2.4rem;
-        }
+    & .btn-x {
+        position: absolute;
+        right: 2.4rem;
+        top: 2.4rem;
     }
 }
 
