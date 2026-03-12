@@ -36,6 +36,7 @@ input {
 
     &:focus {
         border: 1px black solid;
+        outline: none;
     }
 }
 
